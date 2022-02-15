@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="315.0" prefWidth="638.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+   <left>
+      <VBox prefHeight="490.0" prefWidth="111.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="addProductButton" mnemonicParsing="false" onAction="#addProductButtonPushed" text="ADD PRODUCT">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin></Button>
+            <Button fx:id="sortButton" mnemonicParsing="false" onAction="#sortButtonPushed" text="SORT PRODUCTS">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin></Button>
+            <ChoiceBox fx:id="sortingChoiceBox" prefWidth="150.0">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin></ChoiceBox>
+            <ChoiceBox fx:id="productChoiceBox" layoutX="10.0" layoutY="92.0" prefWidth="150.0" />
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </VBox>
+   </left>
+   <right>
+      <ListView prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </right>
+   <center>
+      <ListView fx:id="productsListView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </center>
+   <top>
+      <VBox>
+         <HBox fx:id="labelsHBox" layoutX="33.0" layoutY="56.0">
+            <children>
+               <Label prefHeight="18.0" prefWidth="34.0" text="ID">
+                  <HBox.margin>
+                     <Insets left="100.0" />
+                  </HBox.margin>
+               </Label>
+               <Label text="Name">
+                  <HBox.margin>
+                     <Insets left="100.0" />
+                  </HBox.margin>
+               </Label>
+               <Label text="Price">
+                  <HBox.margin>
+                     <Insets left="100.0" />
+                  </HBox.margin>
+               </Label>
+            </children>
+         </HBox>
+         <HBox fx:id="productFieldsHBox" layoutX="1.0" layoutY="74.0">
+            <children>
+               <TextField fx:id="idTextField" prefHeight="26.0" prefWidth="118.0" />
+               <TextField fx:id="nameTextField" prefHeight="26.0" prefWidth="154.0" />
+               <TextField fx:id="priceTextField" />
+            </children>
+         </HBox>
+      </VBox>
+   </top>
+</BorderPane>
